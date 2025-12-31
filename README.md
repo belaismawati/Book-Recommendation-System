@@ -56,7 +56,7 @@ Dataset yang digunakan merupakan dataset sekunder yang berasal dari [Kaggle](htt
 
 _Exploratory Data Analysis_ ([EDA](https://www.revou.co/kosakata/eda)) adalah proses analisis awal data yang bertujuan untuk memahami karakteristik, struktur, dan komponen penting dari dataset sebelum melakukan analisis statistik atau pemodelan prediktif lebih lanjut. Berikut adalah langkah-langkah EDA yang dilakukan pada proyek ini.
 
-#### **File Books**
+### **File Books**
 **1. Deskripsi Data**
 ```
 books.info()
@@ -98,7 +98,7 @@ Dari output tersebut, diketahui bahwa Agatha Christie menempati posisi teratas s
 Interpretasi:\
 Dari output tersebut, diketahui bahwa Harlequin menempati posisi teratas sebagai penerbit dengan jumlah buku terbanyak, jauh melampaui penerbit lainnya.
 
-#### **File Ratings**
+### **File Ratings**
 **1. Deskripsi Data**
 ```
 ratings.info()
@@ -157,7 +157,7 @@ Interpretasi:
 Interpretasi:\
 Dari grafik ini diketahui bahwa user dengan ID 11676 merupakan user yang paling banyak memberikan rating buku, dengan total mencapai 8.524 rating. Posisi berikutnya diikuti oleh user dengan ID 98391 dengan total 5.802 rating.
 
-#### **File Users**
+### **File Users**
 **1. Deskripsi Data**
 ```
 users.info()
@@ -304,16 +304,15 @@ Data Preparation adalah proses persiapan data sebelum dilakukan analisis atau pe
     book_final = pd.merge(ratings, books_selected, on='ISBN', how='inner')
     ```
 
-- **Visualisasi untuk melihat distribusi data**
-**1. Distribusi Jumlah Rating per Buku**\
-![Distribusi Jumlah Rating per Buku](images/distribusi_jumlah_rating_per_buku.png)\
-Interpretasi:\
-Dari grafik tersebut, diketahui bahwa Buku Bridget Jones's Diary menempati posisi teratas dengan jumlah rating tertinggi, dengan total lebih dari 30 rating. Kemudian diikuti oleh 3 buku dari seri Harry Potter (Book 2, 3, dan 4), dengan total sekitar 25 rating.
-
-**2. Distribusi Rating Berdasarkan Penulis**\
-![Distribusi Rating Berdasarkan Penulis](images/distribusi_rating_berdasarkan_penulis.png)\
-Interpretasi:\
-Dari grafik tersebut, diketahui bahwa buku yang ditulis oleh Stephen King menjadi buku yang paling banyak diberi rating, dengan total mencapai lebih dari 700 rating.
+- **Visualisasi untuk melihat distribusi data**\
+  **1. Distribusi Jumlah Rating per Buku**\
+  ![Distribusi Jumlah Rating per Buku](images/distribusi_jumlah_rating_per_buku.png)\
+  Interpretasi:\
+  Dari grafik tersebut, diketahui bahwa Buku Bridget Jones's Diary menempati posisi teratas dengan jumlah rating tertinggi, dengan total lebih dari 30 rating. Kemudian diikuti oleh 3 buku dari seri Harry Potter (Book 2, 3, dan 4), dengan total sekitar 25 rating.\
+  **2. Distribusi Rating Berdasarkan Penulis**\
+  ![Distribusi Rating Berdasarkan Penulis](images/distribusi_rating_berdasarkan_penulis.png)\
+  Interpretasi:\
+  Dari grafik tersebut, diketahui bahwa buku yang ditulis oleh Stephen King menjadi buku yang paling banyak diberi rating, dengan total mencapai lebih dari 700 rating.
 
 - **Melakukan Encoding**\
     [Encoding](https://blog.rumahweb.com/encoding-dan-decoding-adalah/#:~:text=Apa%20itu%20Encoding?%20Encoding%20adalah%20proses%20mengubah,bentuk%20aslinya%20dengan%20aman%2C%20tanpa%20kehilangan%20informasi.) merupakan proses mengubah data dari satu bentuk ke bentuk lain agar dapat disimpan atau diproses dengan lebih efisien. Pada proyek ini, encoding dilakukan pada kolom UserID dan ISBN. Hal ini dilakukan dengan mengubah format kedua kolom tersebut menjadi representasi numerik.

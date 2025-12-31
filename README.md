@@ -61,7 +61,7 @@ _Exploratory Data Analysis_ ([EDA](https://www.revou.co/kosakata/eda)) adalah pr
 ```
 books.info()
 ```
-Output:
+Output:\
 File Books terdiri dari 271.360 baris dan 8 kolom (ISBN, Book-Title, Book-Author, Year-Of-Publication, Publisher, Image-URL-S, Image-URL-M, dan Image-URL-L) dengan tipe data object.
 
 **2. Informasi Variabel**
@@ -83,19 +83,19 @@ Output:
 print("Jumlah duplikasi pada books: ", books.duplicated().sum())
 ```
 
-Output:
+Output:\
 Hasil dari syntax diatas menunjukkan bahwa tidak terdapat duplikasi pada data.
 
 **4. Distribusi Data**
 
-**a. Distribusi Jumlah Buku per Penulis**
-  ![Grafik Persebaran Jumlah Buku per Penulis](images/distribusi_jumlah_buku_per_penulis.png)
-Interpretasi:
+**a. Distribusi Jumlah Buku per Penulis**\
+![Grafik Persebaran Jumlah Buku per Penulis](images/distribusi_jumlah_buku_per_penulis.png)\
+Interpretasi:\
 Dari output tersebut, diketahui bahwa Agatha Christie menempati posisi teratas sebagai penulis dengan jumlah buku terbanyak, yang kemudian diikuti oleh William Shakespeare, Stephen King, dsb.
 
-**b. Distribusi Jumlah Buku per Penerbit**
- ![Grafik Persebaran Jumlah Buku per Penerbit](images/distribusi_jumlah_buku_per_penerbit.png)
-Interpretasi:
+**b. Distribusi Jumlah Buku per Penerbit**\
+![Grafik Persebaran Jumlah Buku per Penerbit](images/distribusi_jumlah_buku_per_penerbit.png)\
+Interpretasi:\
 Dari output tersebut, diketahui bahwa Harlequin menempati posisi teratas sebagai penerbit dengan jumlah buku terbanyak, jauh melampaui penerbit lainnya.
 
 #### **File Ratings**
@@ -103,7 +103,7 @@ Dari output tersebut, diketahui bahwa Harlequin menempati posisi teratas sebagai
 ```
 ratings.info()
 ```
-Output:
+Output:\
 File Ratings terdiri dari 1.149.780 baris dan 3 kolom (User-ID, ISBN, dan Book-Rating). ISBN bertipe data object, sedangkan User-ID dan Book-Rating bertipe data int64.
 
 **2. Rangkuman Statistik Deskriptif**
@@ -118,7 +118,7 @@ File Ratings terdiri dari 1.149.780 baris dan 3 kolom (User-ID, ISBN, dan Book-R
 | **75%** |2.110280e+05| 7.000000e+00|
 | **max** |2.788540e+05| 1.000000e+01|
 
-Interpretasi:
+Interpretasi:\
 Dari output di atas, diketahui bahwa **nilai maksimum rating adalah 10** dan **nilai minimumnya adalah 0**. Tapi perlu diingat kembali, rating pada dataset ini dapat bersifat **eksplisit** (yang ditunjukkan dengan pemberian **nilai antara 1 sampai 10**) atau **implisit** (yang ditunjukkan dengan **nilai 0**).
 
 Karena proyek ini akan berfokus pada Collaborative Filtering, maka rating yang digunakan adalah rating yang bersifat eksplisit. Sehingga rating yang bersifat implisit akan dihapus dari dataset.
@@ -141,21 +141,20 @@ Output:
 print("Jumlah duplikasi pada ratings: ", ratings.duplicated().sum())
 ```
 
-Output:
+Output:\
 Hasil dari syntax diatas menunjukkan bahwa tidak terdapat duplikasi pada data.
 
 **4. Distribusi Data**
 
-**a. Distribusi Rating Buku**
-  ![Grafik Persebaran Rating Buku](images/distribusi_rating_buku.png)
+**a. Distribusi Rating Buku**\
+![Grafik Persebaran Rating Buku](images/distribusi_rating_buku.png)\
 Interpretasi:
-Grafik ini menunjukkan jumlah rating yang diberikan oleh pengguna terhadap buku dalam skala 1 hingga 10. Dari grafik ini diperoleh beberapa poin:
 * Terdapat 103.736 user yang memberikan rating 8, yang berarti mayoritas pengguna cenderung memberikan penilaian positif terhadap buku yang mereka baca.
 * Rating rendah (seperti 1, 2, dan 3) sangat jarang diberikan, yang berarti user jarang memberikan penilaian negatif.
 
-**b. Distribusi Jumlah Rating per User**
- ![Grafik Persebaran Rating](images/distribusi_jumlah_rating_per_user.png)
-Interpretasi:
+**b. Distribusi Jumlah Rating per User**\
+![Grafik Persebaran Rating](images/distribusi_jumlah_rating_per_user.png)\
+Interpretasi:\
 Dari grafik ini diketahui bahwa user dengan ID 11676 merupakan user yang paling banyak memberikan rating buku, dengan total mencapai 8.524 rating. Posisi berikutnya diikuti oleh user dengan ID 98391 dengan total 5.802 rating.
 
 #### **File Users**
@@ -163,7 +162,7 @@ Dari grafik ini diketahui bahwa user dengan ID 11676 merupakan user yang paling 
 ```
 users.info()
 ```
-Output:
+Output:\
 File Users terdiri dari 278.858 baris dan 3 kolom (User-ID, Location, dan Age). User-ID bertipe data int64, Location bertipe data object, dan Age bertipe data float64.
 
 **2. Rangkuman Statistik Deskriptif**
@@ -178,7 +177,7 @@ File Users terdiri dari 278.858 baris dan 3 kolom (User-ID, Location, dan Age). 
 | **75%** |209143.75000|    44.000000|
 | **max** |278858.00000|   244.000000|
 
-Interpretasi:
+Interpretasi:\
 Dari output di atas, diketahui bahwa rata-rata usia pengguna adalah 34.75 tahun. Kemudian, jika diperhatikan pada usia minimum dan maksimum pengguna, yaitu 0 dan 244 tahun, tentu tidak realistis. Oleh karena itu, akan dilakukan pengecekan lebih lanjut untuk bagian usia.
 
 **3. Informasi Variabel**
@@ -198,22 +197,21 @@ Output:
 print("Jumlah duplikasi pada users: ", users.duplicated().sum())
 ```
 
-Output:
+Output:\
 Hasil dari syntax diatas menunjukkan bahwa tidak terdapat duplikasi pada data.
 
 **4. Distribusi Data**
 
 **Distribusi Jumlah User per Lokasi**
- ![Grafik Persebaran User](images/distribusi_jumlah_user_per_lokasi.png)
+ ![Grafik Persebaran User](images/distribusi_jumlah_user_per_lokasi.png)\
 Interpretasi:
-Dari grafik tersebut, diketahui bahwa:
 * London menempati posisi teratas dengan jumlah user paling banyak, yang kemudian diikuti oleh Toronto dan Sydney.
 * Kota‑kota dari Amerika Utara (AS dan Kanada) mendominasi daftar secara jumlah lokasi. 
 
 ## Data Preparation
 Data Preparation adalah proses persiapan data sebelum dilakukan analisis atau pemodelan. Hal ini bertujuan untuk memastikan model dapat belajar secara efektif dan memberikan prediksi yang akurat.
 
-##### 1. **File Books**
+#### 1. **File Books**
 - **Analisis Missing Value**
     ```
     print(books.isna().sum())
@@ -231,13 +229,13 @@ Data Preparation adalah proses persiapan data sebelum dilakukan analisis atau pe
     | image_url_m |          0|
     | image_url_l |          3|
     
-    Interpretasi:
+    Interpretasi:\
     Berdasarkan hasil output tersebut, diketahui bahwa terdapat 3 fitur yang memiliki _missing value_, yaitu kolom book_author, publisher, dan image_url_l. Karena kolom publisher dan image_url_l tidak akan digunakan dalam proyek ini, maka nilai NaN yang ada akan dibiarkan. Sehingga penanganan _missing value_ akan berfokus ke kolom book_author.
 
-- **Penanganan _Missing Value_**
-    **1. Mengecek baris yang memiliki _missing value_**
-    ![Baris Mengandung Missing Value](Heatmap-Numerical-Features.png)
-    Interpretasi:
+- **Penanganan _Missing Value_**\
+    **1. Mengecek baris yang memiliki _missing value_**\
+    ![Baris Mengandung Missing Value](images/baris_yang_mengandung_missing_value.png)\
+    Interpretasi:\
     Dari output tersebut, diketahui bahwa ISBN dengan nomor 078946697X, 2070426769, dan 0789466953 mengalami _missalignment_ kolom, dimana nilai book_author diisi dengan nilai dari year, dan seterusnya.
 
     **2. Mengatasi _missalignment kolom_**
@@ -254,9 +252,9 @@ Data Preparation adalah proses persiapan data sebelum dilakukan analisis atau pe
     return row
     ```
     
-    **3. Mengecek baris yang mengalami _missalignment_ kolom**
-    ![Baris yang mengalami missalignment](Heatmap-Numerical-Features.png)
-    Interpretasi:
+    **3. Mengecek baris yang mengalami _missalignment_ kolom**\
+    ![Baris yang mengalami missalignment](images/missalignment_kolom.png)\
+    Interpretasi:\
     Dari output tersebut, diketahui bahwa book_author dari ISBN dengan nomor 078946697X, 2070426769, dan 0789466953 salah input di kolom book_title. Oleh karena itu, akan dilakukan penanganan dengan menggunakan syntax berikut.
     ```
     # Contoh penanganan misalignment untuk satu ISBN
@@ -271,15 +269,15 @@ Data Preparation adalah proses persiapan data sebelum dilakukan analisis atau pe
     books_clean = books.dropna(subset=['book_author'])
     ```
 
-##### 2. **File Ratings**
+#### 2. **File Ratings**
 - **Analisis _Missing Value_**
     ```
     print(ratings.isna().sum())
     ```
-    Output:
+    Output:\
     Hasil dari syntax diatas menunjukkan bahwa tidak terdapat _missing value_ pada data.
 
-- **Analisis User Aktif (User dengan >200 Rating)**
+- **Analisis User Aktif (User dengan >200 Rating)**\
     Analisis ini bertujuan untuk mengambil user yang memberikan rating pada lebih dari 200 buku. Hal ini dilakukan guna memastikan kualitas data yang akan digunakan cukup informatif, sehingga dapat menghasilkan rekomendasi yang relevan. Selain itu, hal ini juga membantu meningkatkan efisiensi komputasi karena ukuran data yang diproses menjadi lebih terkontrol, sehingga proses training model berjalan lebih cepat tanpa kehilangan informasi penting. 
     ```
     user_rating_counts = ratings['UserID'].value_counts()
@@ -288,18 +286,18 @@ Data Preparation adalah proses persiapan data sebelum dilakukan analisis atau pe
     ratings = ratings[ratings['UserID'].isin(active_users)]
     ```
 
-##### 3. **File Users**
+#### 3. **File Users**
 - **Analisis _Missing Value_**
     ```
     print(users.isna().sum())
     ```
-    Output:
+    Output:\
     Diketahui bahwa kolom age memiliki _missing value_, dengan total mencapai 110.762 data. Karena kolom ini tidak akan digunakan untuk membangun model dan juga memiliki nilai yang tidak realisitis, maka kolom ini akan dihapus dengan menggunakan syntax berikut.
     ```
     users_clean = users.drop('age', axis=1)
     ```
 
-##### 4. **Merge File Ratings dengan File Books**
+#### 4. **Merge File Ratings dengan File Books**
 - **Menggabungkan file ratings dan file books berdasarkan ISBN**
     ```
     books_selected = books_clean[['ISBN', 'book_title', 'book_author']]
@@ -307,20 +305,20 @@ Data Preparation adalah proses persiapan data sebelum dilakukan analisis atau pe
     ```
 
 - **Visualisasi untuk melihat distribusi data**
-1. Distribusi Jumlah Rating per Buku
-![Distribusi Jumlah Rating per Buku](images/distribusi_jumlah_rating_per_buku.png)
-Interpretasi:
+**1. Distribusi Jumlah Rating per Buku**\
+![Distribusi Jumlah Rating per Buku](images/distribusi_jumlah_rating_per_buku.png)\
+Interpretasi:\
 Dari grafik tersebut, diketahui bahwa Buku Bridget Jones's Diary menempati posisi teratas dengan jumlah rating tertinggi, dengan total lebih dari 30 rating. Kemudian diikuti oleh 3 buku dari seri Harry Potter (Book 2, 3, dan 4), dengan total sekitar 25 rating.
 
-2. Distribusi Rating Berdasarkan Penulis
-![Distribusi Rating Berdasarkan Penulis](images/distribusi_rating_berdasarkan_penulis.png)
-Interpretasi:
+**2. Distribusi Rating Berdasarkan Penulis**\
+![Distribusi Rating Berdasarkan Penulis](images/distribusi_rating_berdasarkan_penulis.png)\
+Interpretasi:\
 Dari grafik tersebut, diketahui bahwa buku yang ditulis oleh Stephen King menjadi buku yang paling banyak diberi rating, dengan total mencapai lebih dari 700 rating.
 
-- **Melakukan Encoding**
+- **Melakukan Encoding**\
     [Encoding](https://blog.rumahweb.com/encoding-dan-decoding-adalah/#:~:text=Apa%20itu%20Encoding?%20Encoding%20adalah%20proses%20mengubah,bentuk%20aslinya%20dengan%20aman%2C%20tanpa%20kehilangan%20informasi.) merupakan proses mengubah data dari satu bentuk ke bentuk lain agar dapat disimpan atau diproses dengan lebih efisien. Pada proyek ini, encoding dilakukan pada kolom UserID dan ISBN. Hal ini dilakukan dengan mengubah format kedua kolom tersebut menjadi representasi numerik.
 
-- **Membagi Dataset**
+- **Membagi Dataset**\
     Pada proyek ini, dataset dibagi menjadi $$80$$% data train dan $$20$$% data validasi. Hal ini bertujuan untuk mengukur seberapa baik model akan bekerja pada data yang belum pernah dilihat sebelumnya. Dengan tahap ini, akan diketahui apakah model benar-benar belajar pola yang berguna atau hanya menghafal data. 
     Sebelum dibagi, dataset akan diacak (_shuffling_) terlebih dahulu. Hal ini bertujuan untuk menghindari bias dan menjamin distribusi data yang representatif.
     ```
@@ -336,22 +334,24 @@ Sistem rekomendasi yang dibangun pada proyek ini menggunakan model-based collabo
 
 Tidak seperti content-based methods, [collaborative filtering](https://journal.unpacti.ac.id/index.php/JSCE/article/view/2201/1201) tidak membutuhkan informasi deskriptif tentang item karena dibangun dengan memanfaatkan pola interaksi antara pengguna dan item. Meskipun demikian, metode ini masih sulit untuk memberikan rekomendasi kepada pengguna baru (belum ada riwayat interaksi) atau item baru (belum ada rating/klik) yang belum memiliki data peringkat yang cukup. 
 
-Dalam proses pengembangan model, dilakukan embedding pada user, book, dan bias masing‑masingnya guna memastikan entitas memiliki representasi numerik yang dapat dipelajari. Kemudian, dilakukan operasi perkalian _dot product_ antara embedding user dan book untuk mengukur tingkat kecocokan di ruang laten. Nilai ini kemudian ditambahkan dengan bias dari setiap user dan book untuk menyesuaikan preferensi individu maupun popularitas item. Hasil akhirnya dilewatkan ke fungsi aktivasi sigmoid, yang mengubah skor menjadi probabilitas antara $$0$$ dan $$1$$. Probabilitas ini dapat ditafsirkan sebagai kemungkinan seorang pengguna menyukai atau berinteraksi dengan buku tertentu. Hasil rekomendasi yang dihasilkan dapat ditunjukkan sebagai berikut.
-![Top 10 Rekomendasi Buku](images/hasil_rekomendasi_buku.png)
+Dalam proses pengembangan model, dilakukan embedding pada user, book, dan bias masing‑masingnya guna memastikan entitas memiliki representasi numerik yang dapat dipelajari. Kemudian, dilakukan operasi perkalian _dot product_ antara embedding user dan book untuk mengukur tingkat kecocokan di ruang laten. Nilai ini kemudian ditambahkan dengan bias dari setiap user dan book untuk menyesuaikan preferensi individu maupun popularitas item. Hasil akhirnya dilewatkan ke fungsi aktivasi sigmoid, yang mengubah skor menjadi probabilitas antara $$0$$ dan $$1$$. Probabilitas ini dapat ditafsirkan sebagai kemungkinan seorang pengguna menyukai atau berinteraksi dengan buku tertentu. 
+
+Hasil rekomendasi yang dihasilkan dapat ditunjukkan sebagai berikut.\
+![Top 10 Rekomendasi Buku](images/hasil_rekomendasi_buku.jpeg)
 
 ## Evaluation
 Pada tahap ini, evaluasi dilakukan dengan menggunakan metrik RMSE (_Root Mean Square Error_). [Metrik](https://journal.unpacti.ac.id/index.php/JSCE/article/view/2201/1201) ini digunakan untuk mengukur seberapa dekat nilai yang diprediksi dengan nilai aktual pengguna. Metrik RMSE bernilai $$0$$ menunjukkan prediksi yang sempurna dan nilai yang lebih tinggi menunjukkan deviasi yang lebih besar. Hal ini berarti semakin rendah nilai RMSE, maka semakin baik performa model dalam merekomendasikan item relevan dan disukai oleh pengguna.
 
-Rumus RMSE:
+Rumus RMSE:\
 $$RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2}$$
 
-Dimana:
-$$n$$ adalah jumlah sampel dalam data
-$$y_i$$ adalah nilai aktual
+Dimana:\
+$$n$$ adalah jumlah sampel dalam data\
+$$y_i$$ adalah nilai aktual\
 $$\hat{y}_i$$ adalah nilai prediksi
 
-Hasil dari metrik RMSE ditunjukkan dalam gambar berikut.
-![Grafik Metrik RMSE](images/grafik_RMSE.png)
+Hasil dari metrik RMSE ditunjukkan dalam gambar berikut.\
+![Grafik Metrik RMSE](images/grafik_RMSE.png)\
 Interpretasi:
 * Diperoleh nilai RMSE sebesar 0.1196 untuk data pelatihan dan 0.1663 untuk data validasi.
 * Dari grafik terlihat bahwa nilai RMSE terus menurun pada data pelatihan, yang berarti model berhasil mempelajari pola dari data dengan baik. Namun, RMSE pada data validasi menunjukkan tren stagnan dan sedikit meningkat di akhir pelatihan, yang mengindikasikan potensi _overfitting_ (model terlalu menyesuaikan diri dengan data pelatihan sehingga performa pada data baru menurun).
